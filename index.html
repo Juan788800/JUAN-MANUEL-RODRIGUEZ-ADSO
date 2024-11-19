@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h2>Formulario </h2>
+    <form id="miFormulario">
+
+     <!-- Campo que solo permite letras -->
+     <label for="nombre">Nombre (solo letras):</label>
+     <input type="text" id="nombre" name="nombre" required pattern="[A-Za-z]+" title="Ingrese solo letras.">
+     <br><br>
+
+     <!-- Campo que solo permite letras minúsculas -->
+     <label for="nombre">Apellido(solo letras minúsculas):</label>
+     <input type="text" id="apellido" name="apellido" required pattern="[a-z]+" title="Ingrese solo letras minúsculas.">
+     <br><br>
+     <!-- Campo de selección de color favorito -->
+     <label for="color">Color Favorito:</label>
+     <input type="color" id="color" name="color" required>
+     <br><br>
+     
+
+     <!-- Campo que solo permite ingresar números para la Edad -->
+     <label for="edad">Edad:</label>
+     <input type="number" id="edad" name="edad" required title="Ingrese solo números.">
+     <br><br>
+
+
+     <!-- Campoque solo permite números aunque sea de tipo text -->
+     <label for="numero">Numero:</label>
+     <input type="text" oninput="this.value = this.value.replace(/[^0-9]/g,'')" name="numero" title="Ingrese solo números.">
+     <br><br>
+
+     <!--campo que permita solo numeros positivos-->
+     <label for="positivos">Positivos:</label>
+     <input type="text" id="positivos" name="positivos" required pattern="^[0-9]+$" title="Ingrese solo números positivos.">
+     <br><br>
+
+     <!--El usuario podra incrematar de 0.5 en 0.5 y solo podra incremantar hasta 20, igualmente no podra decrementarmenos de 10 y al iniciar el formulario inicia con 15-->
+     <label for="maximo-Minimo">Maximo-Mínimo:</label>
+     <input type="number" name="maximo-Mínimo" step="0.5" min="10" max="20" value="15">
+     <br><br>
+
+
+     <!--campo que solo permite fecha de nacimiento-->
+     <label for="FECHA DE NACIMIENTO">Fecha de Nacimiento:</label>
+     <input type="date" id="FECHA DE NACIMIENTO" name="FECHA DE NACIMIENTO" required title="ingrese su fecha de nacimiento">
+     <br><br>
+
+     <!--campo que solo permite poner la hora de registro-->
+     <label for="hora_de_registro">hora de registro:</label>
+     <input type="time" id="hora_de_registro" name="hora_de_registro" >
+     <br><br>
+     
+
+     <!--campo que solo permita ingresar su ciudad-->
+     <label for="INGRESE SU CIUDAD">Ingrese su Ciudad</label>
+     <select id="ciudad" name="ciudad">
+      <option value="ciudad1">BOGOTA</option>
+      <option value="ciudad2">BUCARAMANGA</option>
+      <option value="ciudad3">MEDELLIN</option>
+      <option value="ciudad4">BARRANQUILLA</option>
+     </select><br><br>
+
+     <!--campo que permita poner su genero-->
+     <label for="genero">Género:</label><br>
+     <input type="radio" id="masculino" name="genero" value="Masculino">
+     <label for="masculino">Masculino</label><br>
+    
+     <input type="radio" id="femenino" name="genero" value="Femenino">
+     <label for="femenino">Femenino</label><br>
+    
+     <input type="radio" id="otro" name="genero" value="Otro">
+     <label for="otro">Otro</label><br><br>
+     <!--campo que permita El usuario podra seleccionar varias materias, (HTML, CSS, JS, JAVA, PYTHON, PHP)-->
+     <label for="materias">Materias (opcional):</label><br>
+     <input type="checkbox" name="materias" value="HTML"> HTML<br>
+     <input type="checkbox" name="materias" value="CSS"> CSS<br>
+     <input type="checkbox" name="materias" value="JS"> JS<br>
+     <input type="checkbox" name="materias" value="JAVA"> JAVA<br>
+     <input type="checkbox" name="materias" value="PYTHON"> PYTHON<br>
+     <input type="checkbox" name="materias" value="PHP"> PHP<br><br>
+
+     <!--cmpo que permita que el  usuario pueda seleccionar varias imagenes pero el formato valido es .jpg y .png-->
+     <label for="archivos">Archivos (imágenes .jpg y .png):</label><br>
+     <input type="file" name="archivos" accept=".jpg, .png" multiple><br><br>
+     <!--campo que permita poner una contraseña-->
+     <label for="password">Contraseña:</label>
+     <input type="password" id="password" name="password" required><br><br>
+       
+     <!-- Campo de solo lectura, prellenado con el nombre -->
+     <input type="text" id="nombre" name="nombre" value="Juan Manuel Rodriguez Carreño" readonly>
+     <br><br>
+     
+
+
+
+     <button type="submit">Enviar</button>
+    
+    
+</body>
+</html>
